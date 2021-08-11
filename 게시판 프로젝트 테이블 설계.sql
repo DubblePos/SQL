@@ -3,13 +3,13 @@
 #내용 : 게시판 프로젝트 테이블 설계
 
 #약관 테이블
-CREATE TABLE `Jborad_terms`(
+CREATE TABLE `Jboard_terms`(
 	`terms`		TEXT,
 	`privacy`	TEXT	
 );
 
 #회원 테이블
-CREATE TABLE `Jborad_member`(
+CREATE TABLE `Jboard_member`(
 	`uid`		VARCHAR(20) PRIMARY KEY,
 	`pass`	VARCHAR(255),
 	`name`	VARCHAR(20),
@@ -25,7 +25,7 @@ CREATE TABLE `Jborad_member`(
 );
 
 #게시물 테이블
-CREATE TABLE `Jborad_article`(
+CREATE TABLE `Jboard_article`(
 	`seq`			INT  AUTO_INCREMENT PRIMARY KEY,
 	`parent`		INT DEFAULT 0,
 	`comment`	INT DEFAULT 0,
@@ -38,9 +38,9 @@ CREATE TABLE `Jborad_article`(
 	`regip`		VARCHAR(20),
 	`rdate`		DATETIME
 );
-
+Jboard_member
 #파일 테이블
-CREATE TABLE `Jborad_file`(
+CREATE TABLE `Jboard_file`(
 	`fseq` 		INT  AUTO_INCREMENT PRIMARY KEY,
 	`parent`		INT DEFAULT 0,
 	`oriNAme`	VARCHAR(255),
